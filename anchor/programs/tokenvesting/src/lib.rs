@@ -3,7 +3,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::{associated_token::AssociatedToken , token_interface::{self ,Mint , TokenAccount , TokenInterface ,TransferChecked}};
 
-declare_id!("coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF");
+declare_id!("DsMzDL6Gpeg7kyBdCaj5UCYQ1ZTJ95XGcbpSFEWLEX4J");
 
 #[program]
 pub mod tokenvesting {
@@ -73,7 +73,7 @@ pub mod tokenvesting {
 
       if claimable_amount == 0 {
         return Err(ErrorCode::NothingToClaim.into());
-      }
+      } 
 
       let transfer_cpi_accounts = TransferChecked {
         from: ctx.accounts.treasury_token_account.to_account_info(),
